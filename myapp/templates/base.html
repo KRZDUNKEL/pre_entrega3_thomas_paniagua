@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu hoja de estilos -->
+    <script src="scripts.js" defer></script> <!-- Enlaza tus scripts -->
 </head>
 <body>
     <header>
-        <!-- Navbar o encabezado común a todas las páginas -->
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about/">Acerca de</a></li>
+                <li><a href="/contact/">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <div class="content">
+    <main>
         {% block content %}{% endblock %}
-    </div>
+    </main>
     
     <footer>
-        <!-- Footer común a todas las páginas -->
+        <p>&copy; {{ current_year }} My Project</p>
     </footer>
 </body>
 </html>
